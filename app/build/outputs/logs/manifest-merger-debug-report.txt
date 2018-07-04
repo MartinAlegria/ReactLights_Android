@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
 MERGED from [com.android.support:appcompat-v7:28.0.0-alpha3] /Users/mav/.gradle/caches/transforms-1/files-1.1/appcompat-v7-28.0.0-alpha3.aar/960aef35ec2566c1de1d14471faef80e/AndroidManifest.xml:17:1-22:12
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/mav/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/1e421f152c20b54dc27c1e2646516920/AndroidManifest.xml:2:1-11:12
 MERGED from [com.android.support:support-v4:28.0.0-alpha3] /Users/mav/.gradle/caches/transforms-1/files-1.1/support-v4-28.0.0-alpha3.aar/054c83807e6f1bee917f2e31487382f7/AndroidManifest.xml:17:1-22:12
@@ -32,25 +32,25 @@ MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/mav/.gradle/caches/t
 MERGED from [com.android.support:interpolator:28.0.0-alpha3] /Users/mav/.gradle/caches/transforms-1/files-1.1/interpolator-28.0.0-alpha3.aar/aacc8f031adcec677e4999ce4227be74/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/mav/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.1.aar/c0f3aa128e9cdf6332724c55ab7b2fd0/AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.1] /Users/mav/.gradle/caches/transforms-1/files-1.1/runtime-1.1.1.aar/14876550b551aa5c8e8af4f322b190a8/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
-INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
+INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
 	package
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:3:5-50
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-35:12
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:1-37:12
 		INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:5:5-33:19
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:5:5-35:19
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/mav/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/1e421f152c20b54dc27c1e2646516920/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/mav/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/1e421f152c20b54dc27c1e2646516920/AndroidManifest.xml:9:5-20
 MERGED from [com.android.support:support-compat:28.0.0-alpha3] /Users/mav/.gradle/caches/transforms-1/files-1.1/support-compat-28.0.0-alpha3.aar/272bbcd6d4d18bee51c0edb1ef0d999e/AndroidManifest.xml:22:5-94
@@ -63,6 +63,8 @@ MERGED from [com.android.support:versionedparcelable:28.0.0-alpha3] /Users/mav/.
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:10:9-35
 	android:label
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:8:9-41
+	android:resizeableActivity
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:12:9-43
 	android:roundIcon
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:9:9-54
 	android:icon
@@ -72,33 +74,39 @@ MERGED from [com.android.support:versionedparcelable:28.0.0-alpha3] /Users/mav/.
 	android:theme
 		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:11:9-40
 activity#com.example.mav.reactlights_android.MainActivity
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:14:9-22:20
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:15:9-23:20
 	android:theme
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:16:13-39
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:17:13-47
 	android:name
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:15:13-41
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:16:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:17:13-21:29
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:18:17-69
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:19:17-69
 	android:name
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:18:25-66
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:19:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:20:17-77
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:20:27-74
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:21:27-74
 activity#com.example.mav.reactlights_android.GameActivity
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:25:9-27:42
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:26:9-28:50
 	android:theme
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:27:13-39
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:28:13-47
 	android:name
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:26:13-41
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:27:13-41
 activity#com.example.mav.reactlights_android.SettingsActivity
-ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:29:9-31:20
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:29:9-31:49
 	android:label
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:29:52-76
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:31:13-37
 	android:name
-		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:29:19-51
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:30:13-45
+activity#com.example.mav.reactlights_android.GameOverActivity
+ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:33:9-98
+	android:theme
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:33:52-86
+	android:name
+		ADDED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml:33:19-51
 uses-sdk
 INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/src/main/AndroidManifest.xml

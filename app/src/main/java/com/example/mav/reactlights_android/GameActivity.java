@@ -1,13 +1,26 @@
 package com.example.mav.reactlights_android;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.PorterDuff;
+import android.media.Image;
+import android.os.Build;
+import android.os.CountDownTimer;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
+
 import java.util.*;
 
 public class GameActivity extends AppCompatActivity {
@@ -20,6 +33,7 @@ public class GameActivity extends AppCompatActivity {
     private Button l6;
     private Button correctLight;
     private Button fakeLight;
+    private Button correctWindow;
 
     LightingColorFilter blue = new LightingColorFilter(0xFFFFFFFF, Color.rgb(9,54,188));
     LightingColorFilter red = new LightingColorFilter(0xFFFFFFFF, Color.rgb(188,9,9));
@@ -29,19 +43,36 @@ public class GameActivity extends AppCompatActivity {
     LightingColorFilter correctColor;
     LightingColorFilter fakeColor;
 
+    private TextView scoreText;
+    private TextView countdownText;
+    int score = 0;
+
+    private ImageView startScreen;
+
+    private CountDownTimer countDownTimer;
+    private long milisecTime = 31000;
+    private boolean timerRunning;
+
     LightingColorFilter[] filterArray = {blue, red, green, cyan, yellow};
 
-
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        fullscreen();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
-        randomCircle();
-        int count = 0;
+        startScreen = (ImageView) findViewById(R.id.startScreen);
 
-        play();
+        startScreen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startScreen.setVisibility(View.INVISIBLE);
+                randomCircle();
+                play();
+                runTimer();
+            }
 
+        });
 
     }//ON CREATE
 
@@ -60,18 +91,22 @@ public class GameActivity extends AppCompatActivity {
         }else{
             fakeColor = filterArray[randColor2];
         }
-    }
+    } //COLORS FUNC
 
     private void play() {
         correctLight.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 randomCircle();
+                score++;
+                scoreText.setText(Integer.toString(score));
                 play();
             }
         });
 
         fakeLight.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 randomCircle();
@@ -79,23 +114,45 @@ public class GameActivity extends AppCompatActivity {
                 play();
             }
         });
-    }
+    } //PLAY
 
-    private void setLights() {
+    private void setUI() {
         l1 = (Button) findViewById(R.id.light1);
         l2 = (Button) findViewById(R.id.light2);
         l3 = (Button) findViewById(R.id.light3);
         l4 = (Button) findViewById(R.id.light4);
         l5 = (Button) findViewById(R.id.light5);
         l6 = (Button) findViewById(R.id.light6);
+        correctWindow = (Button) findViewById(R.id.correctWindow);
+        scoreText = (TextView) findViewById(R.id.score);
+        countdownText = (TextView) findViewById(R.id.countdown);
+    } //SET LIGHTS
 
+    private void runTimer(){
+        countDownTimer = new CountDownTimer(milisecTime, 1000) {
+            @Override
+            public void onTick(long l) {
+                milisecTime = l;
+                int timeLeft = (int) milisecTime/1000;
+                countdownText.setText(Integer.toString(timeLeft));
+            }
+
+            @Override
+            public void onFinish() {
+                Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
+                startActivity(intent);
+            }
+        }.start();
+        timerRunning = true;
     }
 
-
+    @RequiresApi(api = Build.VERSION_CODES.O)
     private void randomCircle(){
 
-        setLights();
+        setUI();
         colorsFunc();
+        correctWindow.setBackgroundColor(correctColor.getColorAdd());
+        correctWindow.setVisibility(View.VISIBLE);
         Button[] buttonArray = {l1,l2,l3,l4,l5,l6};
 
         final int rand1 = new Random().nextInt(buttonArray.length);
@@ -116,9 +173,11 @@ public class GameActivity extends AppCompatActivity {
                 buttonArray[rand1].getBackground().setColorFilter(correctColor);
                 correctLight = buttonArray[rand1];
 
+
                 buttonArray[rand2].setVisibility(View.VISIBLE);
                 buttonArray[rand2].getBackground().setColorFilter(fakeColor);
                 fakeLight = buttonArray[rand2];
+
             }else{
                 buttonArray[i].setVisibility(View.INVISIBLE);
             }
@@ -127,5 +186,28 @@ public class GameActivity extends AppCompatActivity {
 
     }//RANDOM CIRCLE
 
+    private void fullscreen(){
+        this.getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION |
+                View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY |
+                View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN |
+                View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+        );
+    }
+
+    @Override
+    public void onResume(){
+        fullscreen();
+        super.onResume();
+    }
+
+    @Override
+    public void onPause(){
+        fullscreen();
+        super.onPause();
+    }
 
 }
+
+
