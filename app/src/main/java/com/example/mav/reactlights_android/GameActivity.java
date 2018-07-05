@@ -85,6 +85,7 @@ public class GameActivity extends AppCompatActivity {
 
         });
 
+
     }//ON CREATE
 
     public void colorsFunc(){

@@ -26,6 +26,7 @@
         <activity
             android:name=".GameActivity"
             android:theme="@style/noActionBar" />
+
         <activity
             android:name=".SettingsActivity"
             android:label="Settings"></activity>

@@ -1,4 +1,0 @@
-#Wed Jul 04 18:53:30 CDT 2018
-base.0=/Users/mav/Desktop/ITC/Personal/ReactLights_Android/app/build/intermediates/transforms/dexMerger/debug/10
-path.0=classes.dex
-renamed.0=classes.dex
