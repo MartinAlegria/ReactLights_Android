@@ -18,32 +18,35 @@
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="32dp"
             android:layout_centerHorizontal="true"
             android:layout_above="@id/playButton"
             android:gravity="center"
             android:text="REACT LIGHTS"
-            android:textSize="46sp"
+            android:textColor="@android:color/black"
+            android:textSize="49sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/playButton"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
+            android:textColor="@android:color/black"
             android:text="@string/play"
-            android:textSize="26dp" />
+            android:textSize="39dp" />
 
         <Button
             android:id="@+id/settingsButton"
-            android:layout_width="110dp"
-            android:layout_height="60dp"
+            android:layout_width="130dp"
+            android:layout_height="80dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="30sp"
             android:layout_below="@id/playButton"
             android:text="@string/settings"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
     </RelativeLayout>
 

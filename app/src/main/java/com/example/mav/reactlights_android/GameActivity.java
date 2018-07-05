@@ -1,12 +1,15 @@
 package com.example.mav.reactlights_android;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.LightingColorFilter;
 import android.graphics.PorterDuff;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Build;
 import android.os.CountDownTimer;
 import android.support.annotation.RequiresApi;
@@ -48,10 +51,15 @@ public class GameActivity extends AppCompatActivity {
     int score = 0;
 
     private ImageView startScreen;
+    private MediaPlayer correct;
+    private MediaPlayer incorr;
 
     private CountDownTimer countDownTimer;
     private long milisecTime = 31000;
     private boolean timerRunning;
+
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
     LightingColorFilter[] filterArray = {blue, red, green, cyan, yellow};
 
@@ -61,6 +69,9 @@ public class GameActivity extends AppCompatActivity {
         fullscreen();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+
+        correct = MediaPlayer.create(this,R.raw.correct);
+        incorr = MediaPlayer.create(this, R.raw.incorrect);
         startScreen = (ImageView) findViewById(R.id.startScreen);
 
         startScreen.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +112,7 @@ public class GameActivity extends AppCompatActivity {
                 randomCircle();
                 score++;
                 scoreText.setText(Integer.toString(score));
+                correct.start();
                 play();
             }
         });
@@ -111,6 +123,7 @@ public class GameActivity extends AppCompatActivity {
             public void onClick(View view) {
                 randomCircle();
                 colorsFunc();
+                incorr.start();
                 play();
             }
         });
@@ -139,6 +152,7 @@ public class GameActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                saveData();
                 Intent intent = new Intent(GameActivity.this, GameOverActivity.class);
                 startActivity(intent);
             }
@@ -194,6 +208,13 @@ public class GameActivity extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION |
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
         );
+    }
+
+    private void saveData() {
+        preferences  = getSharedPreferences("data", Context.MODE_PRIVATE);
+        editor = preferences.edit();
+        editor.putString("score", scoreText.getText().toString());
+        editor.commit();
     }
 
     @Override
