@@ -17,11 +17,14 @@
         android:resizeableActivity="false"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
 
         <!-- Main Activity -->
         <activity
             android:name="com.example.mav.reactlights_android.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/noActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,12 +36,18 @@
         <!-- Game Activity -->
         <activity
             android:name="com.example.mav.reactlights_android.GameActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/noActionBar" />
         <activity
             android:name="com.example.mav.reactlights_android.SettingsActivity"
-            android:label="Settings" />
+            android:configChanges="orientation"
+            android:label="Settings"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.example.mav.reactlights_android.GameOverActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/noActionBar" />
     </application>
 

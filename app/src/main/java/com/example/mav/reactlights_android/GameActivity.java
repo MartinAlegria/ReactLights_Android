@@ -49,8 +49,10 @@ public class GameActivity extends AppCompatActivity {
     private TextView scoreText;
     private TextView countdownText;
     int score = 0;
+    boolean gamePaused = false;
 
     private ImageView startScreen;
+    private ImageView pauseScreen;
     private MediaPlayer correct;
     private MediaPlayer incorr;
 
@@ -73,6 +75,8 @@ public class GameActivity extends AppCompatActivity {
         correct = MediaPlayer.create(this,R.raw.correct);
         incorr = MediaPlayer.create(this, R.raw.incorrect);
         startScreen = (ImageView) findViewById(R.id.startScreen);
+        pauseScreen = (ImageView) findViewById(R.id.pauseScreen);
+
 
         startScreen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,11 +114,15 @@ public class GameActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
-                randomCircle();
-                score++;
-                scoreText.setText(Integer.toString(score));
-                correct.start();
-                play();
+
+                if(!gamePaused){
+                    randomCircle();
+                    score++;
+                    scoreText.setText(Integer.toString(score));
+                    correct.start();
+                    play();
+                }
+
             }
         });
 
@@ -122,11 +130,31 @@ public class GameActivity extends AppCompatActivity {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
-                randomCircle();
-                colorsFunc();
-                incorr.start();
-                play();
+
+                if(!gamePaused){
+                    randomCircle();
+                    colorsFunc();
+                    incorr.start();
+                    play();
+                }
+
             }
+        });
+
+        correctWindow.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
+                if(!gamePaused){
+                    gamePaused = true;
+                    countDownTimer.cancel();
+                    pauseScreen.setVisibility(View.VISIBLE);
+                }else{
+                    gamePaused = false;
+                    runTimer();
+                    pauseScreen.setVisibility(View.INVISIBLE);
+                }
+            }//OnClick
         });
     } //PLAY
 
